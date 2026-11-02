@@ -2,7 +2,7 @@
 
 A Streamlit + DuckDB tool for running delivery across multiple projects: sprint planning, workload balancing, an auto-flagging risk register, and one-click weekly status reports.
 
-**Live demo:** _add your Streamlit Cloud link here_
+**Live demo:** [pm-delivery-tracker.streamlit.app](https://pm-delivery-tracker.streamlit.app/)
 
 > All data is **synthetic**. A fixed "as of" date (2 Nov 2026) keeps the demo and the tests reproducible.
 
