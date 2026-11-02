@@ -1,0 +1,9 @@
+decision_id,project_id,decision_date,decision,rationale,owner_id
+1,1,2026-10-20,Use gradient boosting as the baseline model,Fastest path to a benchmark for stakeholders,2
+2,1,2026-10-27,Descope the explainability dashboard to Sprint 4,Training data delay; protect the core model date,4
+3,2,2026-10-21,Launch chatbot to the billing queue first,Lowest-risk queue with the clearest intents,4
+4,2,2026-10-31,Freeze Sprint 3 scope; new asks go to backlog,Scope grew by more than 20% after sprint start,4
+5,3,2026-10-22,"Migrate in two waves (reporting, then operational tables)",Limits blast radius of cutover,5
+6,3,2026-11-01,Escalate staging access to the IT lead,Blocker is holding up two dependent tasks,5
+7,4,2026-10-24,Use weekly forecast granularity,Matches how sales reviews run,6
+8,4,2026-10-29,Hold a UAT session with sales leads before release,Reduce adoption risk,6

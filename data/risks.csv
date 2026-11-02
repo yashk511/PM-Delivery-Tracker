@@ -1,0 +1,11 @@
+risk_id,project_id,description,likelihood,impact,owner_id,mitigation,status,raised_date
+1,1,Training data refresh delayed by upstream team,3,4,1,Agree SLA with data owners; fall back to last month's snapshot,Open,2026-10-13
+2,1,Key ML engineer overloaded across projects,4,3,3,Rebalance tasks to Diya and Isha,Mitigating,2026-10-23
+3,2,Chatbot intents not signed off by support leads,3,4,2,Weekly review with support leads,Open,2026-10-18
+4,2,Scope growing mid-sprint from new stakeholder asks,4,3,4,Freeze sprint scope; move new asks to backlog,Open,2026-10-30
+5,3,Legacy warehouse cutover window may slip,3,5,5,Dry-run migration; pre-approve rollback plan,Open,2026-10-08
+6,3,Dependency on infra ticket for staging access,4,3,5,Escalate to IT lead; agree a firm date,Mitigating,2026-10-27
+7,3,Data quality issues in legacy tables,4,3,1,Add a validation suite before each load,Open,2026-10-15
+8,4,Forecast accuracy below target on seasonal SKUs,2,3,6,Add seasonal features; backtest monthly,Open,2026-10-21
+9,4,Low dashboard adoption by sales leads,2,2,6,Demo to sales leads and collect feedback,Closed,2026-10-03
+10,2,LLM API cost overrun,2,4,2,Set usage caps and alerts,Open,2026-10-24
