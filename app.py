@@ -43,9 +43,23 @@ st.markdown(
     [data-testid="stSidebar"] * { color: #f1f5f9; }
     [data-testid="stSidebar"] .stCaption { color: #cbd5e1 !important; }
     [data-testid="stSidebar"] label { color: #f8fafc !important; }
-    [data-testid="stSidebar"] [data-baseweb="select"] * { color: #172033 !important; }
-    [data-testid="stSidebar"] [data-baseweb="select"] svg { fill: #64748b !important; }
-    [data-testid="stSidebar"] [role="option"] { color: #172033 !important; }
+    [data-testid="stSidebar"] [data-baseweb="select"] > div,
+    [data-testid="stSidebar"] [data-baseweb="select"] input,
+    [data-testid="stSidebar"] [data-baseweb="select"] span,
+    [data-testid="stSidebar"] [data-baseweb="select"] div {
+        color: #111827 !important;
+        -webkit-text-fill-color: #111827 !important;
+        opacity: 1 !important;
+    }
+    [data-baseweb="popover"] [role="option"],
+    [data-baseweb="popover"] [role="option"] * {
+        color: #111827 !important;
+        background: #ffffff !important;
+    }
+    [data-testid="stSidebar"] [data-baseweb="select"] svg {
+        fill: #334155 !important;
+        color: #334155 !important;
+    }
     .block-container { max-width: 1440px; padding: 2rem 3rem 4rem; }
     h1, h2, h3, [data-testid="stMetricValue"] {
         font-family: 'Space Grotesk', sans-serif;
