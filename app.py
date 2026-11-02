@@ -59,6 +59,11 @@ st.markdown(
         -webkit-text-fill-color: #000000 !important;
         opacity: 1 !important;
     }
+    [data-testid="stSidebar"] [data-baseweb="select"] ::selection {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+        background: #bfdbfe !important;
+    }
     [data-baseweb="popover"] [role="option"],
     [data-baseweb="popover"] [role="option"] * {
         color: #000000 !important;
