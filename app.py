@@ -47,13 +47,22 @@ st.markdown(
     [data-testid="stSidebar"] [data-baseweb="select"] input,
     [data-testid="stSidebar"] [data-baseweb="select"] span,
     [data-testid="stSidebar"] [data-baseweb="select"] div {
-        color: #111827 !important;
-        -webkit-text-fill-color: #111827 !important;
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+        opacity: 1 !important;
+    }
+    [data-testid="stSidebar"] [data-baseweb="select"] [class*="singleValue"],
+    [data-testid="stSidebar"] [data-baseweb="select"] [class*="placeholder"],
+    [data-testid="stSidebar"] [data-baseweb="select"] [aria-live],
+    [data-testid="stSidebar"] [data-baseweb="select"] p {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
         opacity: 1 !important;
     }
     [data-baseweb="popover"] [role="option"],
     [data-baseweb="popover"] [role="option"] * {
-        color: #111827 !important;
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
         background: #ffffff !important;
     }
     [data-testid="stSidebar"] [data-baseweb="select"] svg {
