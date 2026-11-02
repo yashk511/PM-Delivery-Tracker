@@ -43,37 +43,6 @@ st.markdown(
     [data-testid="stSidebar"] * { color: #f1f5f9; }
     [data-testid="stSidebar"] .stCaption { color: #cbd5e1 !important; }
     [data-testid="stSidebar"] label { color: #f8fafc !important; }
-    [data-testid="stSidebar"] [data-baseweb="select"] > div,
-    [data-testid="stSidebar"] [data-baseweb="select"] input,
-    [data-testid="stSidebar"] [data-baseweb="select"] span,
-    [data-testid="stSidebar"] [data-baseweb="select"] div {
-        color: #000000 !important;
-        -webkit-text-fill-color: #000000 !important;
-        opacity: 1 !important;
-    }
-    [data-testid="stSidebar"] [data-baseweb="select"] [class*="singleValue"],
-    [data-testid="stSidebar"] [data-baseweb="select"] [class*="placeholder"],
-    [data-testid="stSidebar"] [data-baseweb="select"] [aria-live],
-    [data-testid="stSidebar"] [data-baseweb="select"] p {
-        color: #000000 !important;
-        -webkit-text-fill-color: #000000 !important;
-        opacity: 1 !important;
-    }
-    [data-testid="stSidebar"] [data-baseweb="select"] ::selection {
-        color: #000000 !important;
-        -webkit-text-fill-color: #000000 !important;
-        background: #bfdbfe !important;
-    }
-    [data-baseweb="popover"] [role="option"],
-    [data-baseweb="popover"] [role="option"] * {
-        color: #000000 !important;
-        -webkit-text-fill-color: #000000 !important;
-        background: #ffffff !important;
-    }
-    [data-testid="stSidebar"] [data-baseweb="select"] svg {
-        fill: #334155 !important;
-        color: #334155 !important;
-    }
     .block-container { max-width: 1440px; padding: 2rem 3rem 4rem; }
     h1, h2, h3, [data-testid="stMetricValue"] {
         font-family: 'Space Grotesk', sans-serif;
@@ -122,6 +91,35 @@ st.markdown(
     .legend { color: #475569; font-size: .78rem; margin-top: -.5rem; }
     .sidebar-brand { font-family: 'Space Grotesk'; font-size: 1.25rem; font-weight: 700; color: white; }
     .sidebar-brand span { color: #82a4ff; }
+    [data-testid="stSidebar"] [data-testid="stRadio"] label {
+        background: transparent;
+        border-radius: 9px;
+        padding: .38rem .55rem;
+        margin: .12rem 0;
+        transition: background .15s ease;
+    }
+    [data-testid="stSidebar"] [data-testid="stRadio"] label:hover {
+        background: #1c2a42;
+    }
+    [data-testid="stSidebar"] [data-testid="stRadio"] label p {
+        color: #dbeafe !important;
+        font-size: .88rem;
+    }
+    [data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) {
+        background: #263d70;
+    }
+    [data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) p {
+        color: #ffffff !important;
+        font-weight: 700;
+    }
+    [data-testid="stSidebar"] [data-testid="stRadio"] [role="radiogroup"] {
+        gap: .1rem;
+    }
+    [data-testid="stPlotlyChart"] {
+        width: 100%;
+        margin: 0;
+    }
+    .stSubheader { margin-top: 1.1rem; }
     </style>
     """,
     unsafe_allow_html=True,
@@ -164,7 +162,12 @@ with st.sidebar:
     st.markdown('<div class="sidebar-brand">◈ <span>Pulse</span></div>', unsafe_allow_html=True)
     st.caption("Delivery intelligence for teams")
     st.divider()
-    choice = st.selectbox("Portfolio view", ["All projects"] + list(names.values()))
+    choice = st.radio(
+        "Portfolio view",
+        ["All projects"] + list(names.values()),
+        index=0,
+        label_visibility="visible",
+    )
     st.divider()
     st.caption("Synthetic portfolio")
     st.caption(f"Data refreshed through {AS_OF:%d %b %Y}")
